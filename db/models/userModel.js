@@ -4,7 +4,7 @@ const userSchema  = new mongoose.Schema(
     {
         fullname:{type:String,required:true},
         email:{type:String,required:true,unique:true},
-        passsword:{type:String,required:true},
+        password:{type:String,required:true},
         phoneNumber:{type:Number,required:true},
         role:{type:String,required:true},enum:['student','recruiter'],
         profile:{
@@ -26,4 +26,4 @@ const userSchema  = new mongoose.Schema(
 )
 
 
-export const user = mongoose.model('user',userSchema)
+export const User = mongoose.model('user',userSchema)
